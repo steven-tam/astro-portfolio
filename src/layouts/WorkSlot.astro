@@ -1,0 +1,24 @@
+---
+const { imageUrl, organization, start, end, role, description } = Astro.props;
+---
+
+<div class="m-8 my-16">
+    <div class="flex p-2 gap-2"> 
+        <img class="h-20 rounded-full" src={imageUrl} alt='me'>
+        <div class="flex justify-center flex-col w-full">
+            <div class="flex justify-between w-full">
+                <h1 class="text-2xl font-bold">
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-yellow-400">
+                        { organization }
+                    </span>
+                </h1>
+                <div class="text-lg font-semibold hidden md:flex">{ start } - { end }</div>
+            </div>
+            <div class="text-gray-600 font-semibold">{ role }</div>
+        </div>
+    </div>
+    <p class="font-semibold flex md:hidden">{ start } - { end }</p>
+    <div class="rounded-md mt-2 text-center">
+        <p class="">{ description }</p>
+    </div>
+</div> 

@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Default.astro';
+import ProjectSlot from '../layouts/ProjectSlot.astro';
+import data from '../data/experience.json';
+
+---
+
+<Layout
+    title="project | steven tam"
+    description="project experience"
+>
+    <ul>
+        {data.project.map((item, id) => (
+            <li key={id}>
+                <ProjectSlot
+                    name={item.name}
+                    technology={item.technology}
+                    start={item.start}
+                    end={item.end}
+                    description={item.description}
+                    sourceUrl={item.sourceUrl}
+                    imageUrl={item.imageUrl}
+                />
+            </li>
+        ))}
+    </ul>
+</Layout>

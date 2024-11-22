@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/Default.astro';
+import WorkSlot from '../layouts/WorkSlot.astro';
+import data from '../data/experience.json';
+
+---
+
+<Layout
+    title="work | steven tam"
+    description="work experience"
+>
+    <div class="flex flex-col items-center">
+        <ul>
+            {data.work.map((item, id) => (
+                <li key={id}>
+                    <WorkSlot
+                        organization={item.organization}
+                        role={item.role}
+                        start={item.start}
+                        end={item.end}
+                        description={item.description}
+                        imageUrl={item.imageUrl}
+                    />
+                </li>
+            ))}
+        </ul>
+
+        <h5 class="font-bold">Volunteering</h5>
+        <ul>
+            {data.volunteering.map((item, id) => (
+                <li key={id}>
+                    <WorkSlot
+                        organization={item.organization}
+                        role={item.role}
+                        start={item.start}
+                        end={item.end}
+                        description={item.description}
+                        imageUrl={item.imageUrl}
+                    />
+                </li>
+            ))}
+        </ul>
+    </div>
+</Layout>
