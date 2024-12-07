@@ -11,8 +11,8 @@ import data from '../data/experience.json';
 >
     <div class="flex flex-col items-center">
         <ul>
-            {data.work.map((item, id) => (
-                <li key={id}>
+            {data.work.map((item) => (
+                <li>
                     <WorkSlot
                         organization={item.organization}
                         role={item.role}
@@ -27,8 +27,8 @@ import data from '../data/experience.json';
 
         <h5 class="font-bold">Volunteering</h5>
         <ul>
-            {data.volunteering.map((item, id) => (
-                <li key={id}>
+            {data.volunteering.map((item) => (
+                <li>
                     <WorkSlot
                         organization={item.organization}
                         role={item.role}

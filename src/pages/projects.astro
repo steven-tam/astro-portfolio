@@ -10,8 +10,8 @@ import data from '../data/experience.json';
     description="project experience"
 >
     <ul>
-        {data.project.map((item, id) => (
-            <li key={id}>
+        {data.project.map((item) => (
+            <li>
                 <ProjectSlot
                     name={item.name}
                     technology={item.technology}
