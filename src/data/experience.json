@@ -27,8 +27,8 @@
     ],
     "volunteering": [
         {
-            "organization": "YapRap LLC",
-            "role": "Software Engineer",
+            "organization": "Minneapolis Central Library",
+            "role": "IT Support",
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -36,7 +36,7 @@
         },
         {
             "organization": "YapRap LLC",
-            "role": "Software Engineer",
+            "role": "English Instructor",
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
@@ -60,7 +60,7 @@
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "imageUrl": "./src/img/yaprap-home.svg",
-            "sourceUrl": "yaprap.net"
+            "sourceUrl": "https://yaprap.net"
         },
         {
             "name": "YapRap - Web",
@@ -69,7 +69,7 @@
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "imageUrl": "./src/img/yaprap-web-home.png",
-            "sourceUrl": "yaprap.net"
+            "sourceUrl": "https://yaprap.net"
         },
         {
             "name": "Interactive Prequisite Flowchart",
