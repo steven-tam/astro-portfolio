@@ -6,7 +6,7 @@
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/placeholder.png"
+            "imageUrl": "/src/img/placeholder.png"
         },
         {
             "organization": "YapRap LLC",
@@ -14,7 +14,7 @@
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/placeholder.png"
+            "imageUrl": "/src/img/placeholder.png"
         },
         {
             "organization": "YapRap LLC",
@@ -22,7 +22,7 @@
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ",
-            "imageUrl": "./src/img/placeholder.png"
+            "imageUrl": "/src/img/placeholder.png"
         }
     ],
     "volunteering": [
@@ -32,7 +32,7 @@
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/placeholder.png"
+            "imageUrl": "/src/img/placeholder.png"
         },
         {
             "organization": "YapRap LLC",
@@ -40,7 +40,7 @@
             "start": "October 2023",
             "end": "Present",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/placeholder.png"
+            "imageUrl": "/src/img/placeholder.png"
         }
     ],
     "project": [
@@ -50,7 +50,7 @@
             "end": "Sep 2024",
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/gmp-results-long.png",
+            "imageUrl": "/src/img/gmp-results-long.png",
             "sourceUrl": "https://github.com/steven-tam/MmOverlap"
         },
         {
@@ -59,7 +59,7 @@
             "end": "Sep 2024",
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/yaprap-home.svg",
+            "imageUrl": "/src/img/yaprap-home.svg",
             "sourceUrl": "https://yaprap.net"
         },
         {
@@ -68,7 +68,7 @@
             "end": "Sep 2024",
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/yaprap-web-home.png",
+            "imageUrl": "/src/img/yaprap-web-home.png",
             "sourceUrl": "https://yaprap.net"
         },
         {
@@ -77,7 +77,7 @@
             "end": "Sep 2024",
             "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            "imageUrl": "./src/img/ipf-darkmode.png",
+            "imageUrl": "/src/img/ipf-darkmode.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         }
     ]

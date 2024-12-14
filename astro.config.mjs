@@ -11,6 +11,7 @@ export default defineConfig({
   site: "https://www.steventam.com",
   integrations: [sitemap(), tailwind()],
   server: { host: '0.0.0.0'},
+  devToolbar: { enabled: false },
   
 
   
