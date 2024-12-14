@@ -8,6 +8,6 @@ import tailwind from "@astrojs/tailwind";
 // https://astro.build/config
 export default defineConfig({
   output: "static",
-  site: "https://steventam.com",
+  site: "https://www.steventam.com",
   integrations: [sitemap(), tailwind()],
 });
