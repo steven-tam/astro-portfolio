@@ -10,4 +10,8 @@ export default defineConfig({
   output: "static",
   site: "https://www.steventam.com",
   integrations: [sitemap(), tailwind()],
+  server: { host: '0.0.0.0'},
+  
+
+  
 });
