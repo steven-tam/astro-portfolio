@@ -12,5 +12,9 @@ export default defineConfig({
   integrations: [sitemap(), tailwind()],
   server: { host: '0.0.0.0'},
   devToolbar: { enabled: false },
+  prefetch: {
+    prefetchAll: true
+  },
+
 });
 
