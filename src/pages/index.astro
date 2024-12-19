@@ -6,23 +6,28 @@ import Layout from '../layouts/Default.astro';
 	title="home | steven tam"
 	description="hello world"
 >
-<div class="flex flex-row p-10 flex-col md:flex-row justify-evenly">
+<div class="flex flex-row p-10 flex-col md:flex-row justify-center">
     <div>
-        <img class="h-96 rounded-full border-[16px] border-amber-200 block md:hidden" src="./src/img/placeholder.png" alt='me'>
+        <img class="w-11/12 rounded-full border-[16px] border-amber-200 block md:hidden" src="./src/img/placeholder.png" alt='me'>
     </div>
+
     <div class="prose">
         <h1 class="font-bold">
             <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-yellow-400">
                 hi, i'm Steven!
             </span>
         </h1>
+
         <div>
             <p>I'm a Software Engineer interested in developing mobile applications with React Native and cloud infastructure.</p>
             <p>This past summer I interned at a YapRap LLC where I developed a website and mobile application, and deployed the mobile app to the App Store and Google Play.</p>
             <p>Currently I'm studying at the University of Minnesota, wrapping up my degree in Mathematics - Computer-Application.</p>
             <p>Outside of class you can find me playing soccer, ultimate frisbee, and working on mobile apps for cool ideas that randomly come up in the shower.</p>
         </div>
+
     </div>
+    
     <img class="h-96 rounded-full border-[16px] border-amber-200 hidden md:block" src="./src/img/placeholder.png" alt='me'>
+
 </div>
 </Layout>

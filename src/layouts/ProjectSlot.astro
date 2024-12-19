@@ -22,9 +22,11 @@ const { name, start, end, description, sourceUrl, imageUrl, technology } = Astro
         <div class="rounded-md mt-2">
             <p>{ description }</p>
         </div>
+        <div>
         <a href={ sourceUrl }> 
             <img class="rounded-md transition-transform transform hover:scale-105" src={ imageUrl } alt='Project'>
         </a>
+        </div>
         <div>
             <p><span class="font-bold">Skills:</span> { technology }</p> 
         </div>
