@@ -1,28 +1,45 @@
 ---
-import HeaderLink from './HeaderLink.astro';
+
 ---
 
-<header class="py-3.5 pt-12">
+<header class="py-3.5 pt-8">
 	<nav class="px-7 flex justify-between flex-row md:space-x-4">
 
-		<div class="flex flex-row"> 
+		<div class="flex flex-col w-full"> 
 			<a id="NameLink" class="font-bold text-4xl" href="/">Steven Tam</a>
-			<div class="flex items-center gap-2 pl-4 py-2 text-xl">
-				<a href="/work">Work</a>
-				<a href="/projects">Projects</a>
+
+			<div class="flex w-full justify-between">
+				<div class="flex items-center gap-2 py-2 text-2xl">
+					<a href="/work">Work</a>
+					<a href="/projects">Projects</a>
+				</div>
+
+				<div class="flex gap-3">
+					<a href="https://github.com/steven-tam" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
+						<img src="/src/img/github.svg" alt="github icon" class="h-6 aspect-square" />
+						<span class="hidden md:block">/steven-tam</span>
+					</a>
+					<a href="https://www.linkedin.com/in/steven-tam-career/" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
+						<img src="/src/img/linkedin.svg" alt="linkedin icon" class="h-6 aspect-square" />
+						<span class="hidden md:block">/in/steven-tam-career</span>
+					</a>
+				</div>
 			</div>
 		</div>
+
 		
-		<div class="hidden md:flex flex flex-row space-x-3 drop-shadow-md"> 
+		
+		<!-- <div class="hidden md:flex flex flex-row space-x-3 drop-shadow-md"> 
 			<a href="https://github.com/steven-tam" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
 				<img src="/src/img/github.svg" alt="github icon" class="h-5 aspect-square" />
-				<span>/steven-tam</span>
+				
 			</a>
 			<a href="https://www.linkedin.com/in/steven-tam-career/" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
 				<img src="/src/img/linkedin.svg" alt="linkedin icon" class="h-5 aspect-square" />
 				<span>/in/steven-tam-career</span>
 			</a>
-		</div>
+		</div> -->
+
 	</nav>
 </header><style>
 	header {
