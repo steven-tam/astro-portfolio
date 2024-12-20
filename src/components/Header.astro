@@ -2,12 +2,12 @@
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header class="py-3.5">
+<header class="py-3.5 pt-12">
 	<nav class="px-7 flex justify-between flex-row md:space-x-4">
 
-		<div class="flex md:flex-row"> 
-			<a id="NameLink" class="hover:underline font-bold text-4xl" href="/">Steven Tam</a>
-			<div class="flex space-x-2 items-center m-0 md:mt-3">
+		<div class="flex flex-row"> 
+			<a id="NameLink" class="font-bold text-4xl" href="/">Steven Tam</a>
+			<div class="flex items-center gap-2 pl-4 py-2 text-xl">
 				<a href="/work">Work</a>
 				<a href="/projects">Projects</a>
 			</div>
@@ -33,39 +33,6 @@ import HeaderLink from './HeaderLink.astro';
 		top:0;
 		z-index: 3;
 	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
 
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
-	nav a {
-		padding: 0.6em 0.5em;
-		color: var(--black);
-		border-bottom: 4px solid transparent;
-	}
-	#NameLink {
-		text-decoration: none;
-	}
-	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
-	}
-	.social-links,
-	.social-links a {
-		display: flex;
-	}
-	@media (max-width: 720px) {
-		.social-links {
-			display: none;
-		}
-	}
+
 </style>
