@@ -1,0 +1,13 @@
+name: Build and Push to Portfolio to ECR
+
+on:
+    push:
+        branches:
+            - main
+
+permissions:
+  id-token: write # This is required for requesting the JWT for OIDC
+  contents: read  # This is required for actions/checkout
+
+jobs:
+    runs-on: ubuntu-latest
