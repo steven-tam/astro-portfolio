@@ -1,13 +1,44 @@
-name: Build and Push to Portfolio to ECR
+name: Build and Push Docker Image to ECR
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
+
+env:
+  AWS_REGION: us-east-2 # Replace with your AWS region, e.g., us-east-1
+  ECR_REPOSITORY: 588738594138.dkr.ecr.us-east-2.amazonaws.com/low-traffic-static-repo # Your ECR repository name
+  AWS_ASSUME_ROLE_ARN: arn:aws:iam::588738594138:role/GIthubAWSOIDC
 
 permissions:
-  id-token: write # This is required for requesting the JWT for OIDC
-  contents: read  # This is required for actions/checkout
+  id-token: write   # Required for OIDC authentication
+  contents: read    # Required for actions/checkout
 
 jobs:
+  build-and-push:
     runs-on: ubuntu-latest
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Configure AWS credentials using OIDC
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ env.AWS_ASSUME_ROLE_ARN }} # Replace with your role ARN
+          aws-region: ${{ env.AWS_REGION }}
+
+      # Step 3: Log in to Amazon ECR
+      - name: Log in to Amazon ECR
+        id: login-ecr
+        run: |
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com
+
+      # Step 4: Build and push the Docker image
+      - name: Build and push Docker image
+        run: |
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/${{ env.ECR_REPOSITORY }}
+          docker build -t $IMAGE_URI:latest .
+          docker push $IMAGE_URI:latest
