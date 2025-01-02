@@ -7,7 +7,7 @@ on:
 
 env:
   AWS_REGION: us-east-2 # Replace with your AWS region, e.g., us-east-1
-  ECR_REPOSITORY: 588738594138.dkr.ecr.us-east-2.amazonaws.com/low-traffic-static-repo # Your ECR repository name
+  ECR_REPOSITORY_NAME: low-traffic-static-repo # Your ECR repository name
   AWS_ASSUME_ROLE_ARN: arn:aws:iam::588738594138:role/GIthubAWSOIDC
 
 permissions:
@@ -39,6 +39,7 @@ jobs:
       # Step 4: Build and push the Docker image
       - name: Build and push Docker image
         run: |
-          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/${{ env.ECR_REPOSITORY }}
+          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/${{ env.ECR_REPOSITORY_NAME }}
           docker build -t $IMAGE_URI:latest .
           docker push $IMAGE_URI:latest
+ 
