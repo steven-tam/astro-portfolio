@@ -9,56 +9,45 @@ env:
   PROJECT_ID: gcp-low-traffic-runner # Replace with your GCP project ID
   REGION: us-central1 # Replace with your desired GCP region
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
-  IMAGE_URI: "us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo/"
+  IMAGE_URI: "us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo/image-name" # Add an image name if missing
 
 permissions:
   id-token: write # Required for OIDC authentication
   contents: read # Required for actions/checkout
 
 jobs:
-  Get_OIDC_ID_token:
+  authenticate:
+    name: Authenticate to GCP
     runs-on: ubuntu-latest
     steps:
-    - id: 'auth'
-      name: 'Authenticate to GCP'
-      uses: 'google-github-actions/auth@f1e2d3c4b5a6f7e8d9c0b1a2c3d4e5f6a7b8c9d0'
-      with:
-          create_credentials_file: 'true'
-          workload_identity_provider: 'WORKLOAD-IDENTITY-PROVIDER'
-          service_account: 'SERVICE-ACCOUNT'
-    - id: 'gcloud'
-      name: 'gcloud'
-      run: |-
-        gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
-        gcloud services list
-
-
-  build-and-push:
-    runs-on: ubuntu-latest
-    steps:
-      # Step 1: Check out the repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      # Step 2: Authenticate to Google Cloud using OIDC
-      - name: Authenticate to Google Cloud
+      - name: Authenticate to GCP using OIDC
+        id: auth
         uses: google-github-actions/auth@v2
         with:
-          project_id: 'gcp-low-traffic-runner' # Replace with your GCP project ID
-          workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo" # Update with your Workload Identity Provider
+          create_credentials_file: 'true'
+          workload_identity_provider: 'WORKLOAD-IDENTITY-PROVIDER' # Replace with your workload identity provider
+          service_account: 'SERVICE-ACCOUNT' # Replace with your service account email
 
-      # Step 3: Configure Docker for Artifact Registry
+      - name: Verify GCP Authentication
+        run: | 
+          gcloud auth login --brief --cred-file="${{ steps.auth.outputs.credentials_file_path }}"
+          gcloud services list --enabled
+
+  build-and-push:
+    name: Build and Push Docker Image
+    runs-on: ubuntu-latest
+    needs: authenticate
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # Step 2: Configure Docker for Artifact Registry
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+        run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
-      # Step 4: Build and Push Docker Image to Artifact Registry
+      # Step 3: Build and Push Docker Image
       - name: Build and Push Docker Image
         run: |
           docker build -t ${{ env.IMAGE_URI }}:latest .
           docker push ${{ env.IMAGE_URI }}:latest
-
-
-          
-         
-
-
