@@ -9,8 +9,8 @@ env:
   PROJECT_ID: gcp-low-traffic-runner # Replace with your GCP project ID
   REGION: us-central1 # Replace with your desired GCP region
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
-  IMAGE_NAME: app-image # Replace with your Docker image name
-  IMAGE_URI: "us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo/${{ env.IMAGE_NAME }}"
+  IMAGE_NAME: latest # Image name for tagging
+  IMAGE_URI: "us-central1-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}"
 
 permissions:
   id-token: write # Required for OIDC authentication
@@ -31,15 +31,12 @@ jobs:
           project_id: ${{ env.PROJECT_ID }}
           workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo"
 
-      # Step 3: Enable Artifact Registry API (Optional: if not already enabled)
-      - name: Enable Artifact Registry API
-        run: gcloud services enable artifactregistry.googleapis.com
-
-      # Step 4: Configure Docker for Artifact Registry
+      # Step 3: Configure Docker for Artifact Registry
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev --quiet
 
-      # Step 5: Build and Push Docker Image to Artifact Registry
+      # Step 4: Build and Push Docker Image to Artifact Registry
       - name: Build and Push Docker Image
         run: |
-          docker build -t $
+          docker build -t ${{ env.IMAGE_URI }} .
+          docker push ${{ env.IMAGE_URI }}
