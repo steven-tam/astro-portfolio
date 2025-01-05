@@ -1,4 +1,4 @@
-name: Build and Push Docker Image to ECR
+name: Build and Push to Artifact Registry
 
 on:
   push:
@@ -6,13 +6,14 @@ on:
       - main
 
 env:
-  AWS_REGION: us-east-2 # Replace with your AWS region, e.g., us-east-1
-  ECR_REPOSITORY_NAME: low-traffic-static-repo # Your ECR repository name
-  AWS_ASSUME_ROLE_ARN: arn:aws:iam::588738594138:role/GIthubAWSOIDC
+  PROJECT_ID: astro-portfolio # Replace with your GCP project ID
+  REGION: us-central1         # Replace with your desired GCP region
+  REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
+  IMAGE_NAME: latest-portfolio # Docker image name
 
 permissions:
-  id-token: write   # Required for OIDC authentication
-  contents: read    # Required for actions/checkout
+  id-token: write # Required for OIDC authentication
+  contents: read  # Required for actions/checkout
 
 jobs:
   build-and-push:
@@ -20,26 +21,35 @@ jobs:
 
     steps:
       # Step 1: Check out the repository
-      - name: Checkout code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: 'actions/checkout@v4'
 
-      # Step 2: Configure AWS credentials using OIDC
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+      # Step 2: Authenticate to Google Cloud using OIDC
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
         with:
-          role-to-assume: ${{ env.AWS_ASSUME_ROLE_ARN }} # Replace with your role ARN
-          aws-region: ${{ env.AWS_REGION }}
+          project_id: 'my-portfolio'
+          workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo" # Update with your Workload Identity Provider
 
-      # Step 3: Log in to Amazon ECR
-      - name: Log in to Amazon ECR
-        id: login-ecr
-        run: |
-          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com
+      # Step 3: Configure Docker for Artifact Registry
+      - name: Configure Docker for Artifact Registry
+        run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
 
-      # Step 4: Build and push the Docker image
-      - name: Build and push Docker image
+      # Step 4: Build and Push Docker Image to Artifact Registry
+      - name: Build and Push Docker Image
+        env:
+          IMAGE_URI: "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}"
         run: |
-          IMAGE_URI=${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${AWS_REGION}.amazonaws.com/${{ env.ECR_REPOSITORY_NAME }}
           docker build -t $IMAGE_URI:latest .
           docker push $IMAGE_URI:latest
- 
+
+      # # Step 5: (Optional) Deploy to Cloud Run
+      # - name: Deploy to Cloud Run
+      #   env:
+      #     IMAGE_URI: "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}"
+      #   run: |
+      #     gcloud run deploy ${{ env.IMAGE_NAME }} \
+      #       --image $IMAGE_URI:latest \
+      #       --region ${{ env.REGION }} \
+      #       --platform managed \
+      #       --allow-unauthenticated
