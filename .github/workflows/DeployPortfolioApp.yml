@@ -16,8 +16,8 @@ permissions:
   contents: read # Required for actions/checkout
 
 jobs:
-  runs-on: ubuntu-latest
   Get_OIDC_ID_token:
+    runs-on: ubuntu-latest
     steps:
     - id: 'auth'
       name: 'Authenticate to GCP'
@@ -34,6 +34,7 @@ jobs:
 
 
   build-and-push:
+    runs-on: ubuntu-latest
     steps:
       # Step 1: Check out the repository
       - name: Checkout repository
