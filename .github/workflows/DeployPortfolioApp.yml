@@ -7,13 +7,13 @@ on:
 
 env:
   PROJECT_ID: gcp-low-traffic-runner # Replace with your GCP project ID
-  REGION: us-central1         # Replace with your desired GCP region
+  REGION: us-central1 # Replace with your desired GCP region
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
   IMAGE_NAME: latest-portfolio # Docker image name
 
 permissions:
   id-token: write # Required for OIDC authentication
-  contents: read  # Required for actions/checkout
+  contents: read # Required for actions/checkout
 
 jobs:
   build-and-push:
@@ -22,34 +22,29 @@ jobs:
     steps:
       # Step 1: Check out the repository
       - name: Checkout repository
-        uses: 'actions/checkout@v4'
+        uses: actions/checkout@v4
 
       # Step 2: Authenticate to Google Cloud using OIDC
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          project_id: 'my-portfolio'
+          project_id: 'gcp-low-traffic-runner' # Replace with your GCP project ID
           workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo" # Update with your Workload Identity Provider
 
       # Step 3: Configure Docker for Artifact Registry
       - name: Configure Docker for Artifact Registry
-        run: gcloud auth configure-docker ${REGION}-docker.pkg.dev
+        run: gcloud auth configure-docker us-central1-docker.pkg.dev
 
       # Step 4: Build and Push Docker Image to Artifact Registry
       - name: Build and Push Docker Image
         env:
-          IMAGE_URI: "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}"
+          IMAGE_URI: "us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo/${{ env.IMAGE_NAME }}"
         run: |
           docker build -t $IMAGE_URI:latest .
           docker push $IMAGE_URI:latest
 
-      # # Step 5: (Optional) Deploy to Cloud Run
-      # - name: Deploy to Cloud Run
-      #   env:
-      #     IMAGE_URI: "${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT_ID }}/${{ env.REPOSITORY_NAME }}/${{ env.IMAGE_NAME }}"
-      #   run: |
-      #     gcloud run deploy ${{ env.IMAGE_NAME }} \
-      #       --image $IMAGE_URI:latest \
-      #       --region ${{ env.REGION }} \
-      #       --platform managed \
-      #       --allow-unauthenticated
+
+          
+         
+
+
