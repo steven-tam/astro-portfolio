@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  PROJECT_ID: astro-portfolio # Replace with your GCP project ID
+  PROJECT_ID: gcp-low-traffic-runner # Replace with your GCP project ID
   REGION: us-central1         # Replace with your desired GCP region
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
   IMAGE_NAME: latest-portfolio # Docker image name
