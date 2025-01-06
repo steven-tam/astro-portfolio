@@ -7,9 +7,9 @@ on:
 
 env:
   PROJECT_ID: gcp-low-traffic-runner # Replace with your GCP project ID
-  REGION: us-central1 # Replace with your desired GCP region
+  AR_REPO_LOCATION: 'us-central1'
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
-  IMAGE_URI: "us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo/latest"
+  AR_URL: 'us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo'
   SERVICE_ACCOUNT: 'my-github-actions-service@gcp-low-traffic-runner.iam.gserviceaccount.com'
 
 permissions:
@@ -17,31 +17,34 @@ permissions:
   contents: read # Required for actions/checkout
 
 jobs:
-  build-and-push:
+  push_to_ar:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Check out the repository
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v2
 
-      # Step 2: Authenticate to Google Cloud using OIDC
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
+      - name: Google Auth
+        id: auth
+        uses: 'google-github-actions/auth@v2'
         with:
           token_format: 'access_token'
-          project_id: ${{ env.PROJECT_ID }} # Replace with your GCP project ID
-          service_account: ${{ env.SERVICE_ACCOUNT }} # my-service-account@my-project.iam.gserviceaccount.com
-          workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo" # Update with your Workload Identity Provider
+          project_id: ${{ env.PROJECT_ID }}
+          service_account: ${{ env.SERVICE_ACCOUNT }}
+          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
 
-        
+      - name: Docker Auth
+        id: docker-auth
+        uses: 'docker/login-action@v1'
+        with:
+          username: 'oauth2accesstoken'
+          password: '${{ steps.auth.outputs.access_token }}'
+          registry: '${{ env.AR_REPO_LOCATION }}-docker.pkg.dev'
 
-      # Step 3: Configure Docker for Artifact Registry
-      - name: Configure Docker for Artifact Registry
-        run: | 
-          gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
-
-      # Step 4: Build and Push Docker Image to Artifact Registry
-      - name: Build and Push Docker Image
-        run: |
-          docker build -t ${{ env.IMAGE_URI }} .
-          docker push ${{ env.IMAGE_URI }}
+      - name: Build and Push Container
+        run: |-
+          docker build -t "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" ./
+          docker push "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
