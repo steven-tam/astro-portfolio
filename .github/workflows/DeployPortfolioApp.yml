@@ -11,6 +11,7 @@ env:
   REPOSITORY_NAME: gcp-low-traffic-repo # Artifact Registry repository name
   AR_URL: 'us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo'
   SERVICE_ACCOUNT: 'my-github-actions-service@gcp-low-traffic-runner.iam.gserviceaccount.com'
+  WORKLOAD_IDENTITY_PROVIDER: 'projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo'
 
 permissions:
   id-token: write # Required for OIDC authentication
