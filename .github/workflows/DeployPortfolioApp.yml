@@ -27,12 +27,16 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
         with:
+          token_format: 'access_token'
           project_id: 'gcp-low-traffic-runner' # Replace with your GCP project ID
           workload_identity_provider: "projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo" # Update with your Workload Identity Provider
+
+        
 
       # Step 3: Configure Docker for Artifact Registry
       - name: Configure Docker for Artifact Registry
         run: gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
+        run: gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://us-central1-docker.pkg.dev
 
       # Step 4: Build and Push Docker Image to Artifact Registry
       - name: Build and Push Docker Image
