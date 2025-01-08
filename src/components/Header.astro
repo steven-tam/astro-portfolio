@@ -1,4 +1,6 @@
 ---
+import HeaderLink from "./HeaderLink.astro";
+
 
 ---
 
@@ -10,20 +12,9 @@
 
 			<div class="flex w-full justify-between">
 				<div class="flex items-center gap-2 py-2 text-2xl">
-					<a href="/work">work</a>
-					<a href="/projects">projects</a>
-					<a href="/contact">contact</a>
-				</div>
-
-				<div class="flex gap-3">
-					<a href="https://github.com/steven-tam" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
-						<img src="/img/github.svg" alt="github icon" class="h-6 aspect-square" />
-						<span class="hidden md:block">/steven-tam</span>
-					</a>
-					<a href="https://www.linkedin.com/in/steven-tam-career/" target="_blank" class="flex hover:underline text-lg items-center space-x-1">
-						<img src="/img/linkedin.svg" alt="linkedin icon" class="h-6 aspect-square" />
-						<span class="hidden md:block">/in/steven-tam-career</span>
-					</a>
+					<HeaderLink href="/work">Work</HeaderLink>
+					<HeaderLink href="/projects">Projects</HeaderLink>
+					<HeaderLink href="/contact">Contact</HeaderLink>
 				</div>
 			</div>
 		</div>
@@ -48,10 +39,7 @@
 		margin: 0;
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-		position: sticky;
 		top:0;
 		z-index: 3;
 	}
-
-
 </style>
