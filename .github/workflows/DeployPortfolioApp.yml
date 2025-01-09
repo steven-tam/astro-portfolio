@@ -1,4 +1,4 @@
-name: Build and Push to Artifact Registry
+name: Build and Deploy to Cloud Run
 
 on:
   push:
@@ -6,30 +6,32 @@ on:
       - main
 
 env:
-  PROJECT_ID: gcp-low-traffic-runner
+  PROJECT_ID: 'gcp-low-traffic-runner'
   AR_REPO_LOCATION: 'us-central1'
-  REPOSITORY_NAME: gcp-low-traffic-repo
+  REPOSITORY_NAME: 'gcp-low-traffic-repo'
   AR_URL: 'us-central1-docker.pkg.dev/gcp-low-traffic-runner/gcp-low-traffic-repo'
   SERVICE_ACCOUNT: 'my-github-actions-service@gcp-low-traffic-runner.iam.gserviceaccount.com'
   WORKLOAD_IDENTITY_PROVIDER: 'projects/702533190494/locations/global/workloadIdentityPools/github/providers/my-repo'
   IMAGE_NAME: 'portfolio-latest'
+  SERVICE_NAME: 'portfolio-service'
+  REGION: 'us-central1'
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  push_to_ar:
+  build_and_deploy:
+    runs-on: ubuntu-latest
     permissions:
       contents: 'read'
       id-token: 'write'
 
-    runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout Code
         uses: actions/checkout@v2
 
-      - name: Google Auth
+      - name: Authenticate with Google Cloud
         id: auth
         uses: 'google-github-actions/auth@v2'
         with:
@@ -38,23 +40,24 @@ jobs:
           service_account: ${{ env.SERVICE_ACCOUNT }}
           workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
 
-      - name: Docker Auth
+      - name: Authenticate Docker with Artifact Registry
         id: docker-auth
         uses: 'docker/login-action@v1'
         with:
           username: 'oauth2accesstoken'
           password: '${{ steps.auth.outputs.access_token }}'
-          registry: 'us-central1-docker.pkg.dev'
+          registry: ${{ env.AR_URL }}
 
-      - name: Build and Push Container
-        run: |-
-          docker build -t "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" -t "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:latest" ./
+      - name: Build and Push Container to Artifact Registry
+        run: |
+          docker build -t "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:${{ github.sha }}" -t "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:latest" .
+          docker push "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
           docker push "${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:latest"
 
       - name: Deploy to Cloud Run
-      run: |
-        gcloud run deploy SERVICE_NAME \
-          --image REGION-docker.pkg.dev/PROJECT_ID/REPO_NAME/IMAGE_NAME:TAG \
-          --region REGION \
-          --platform managed \
-          --allow-unauthenticated
+        run: |
+          gcloud run deploy ${{ env.SERVICE_NAME }} \
+            --image ${{ env.AR_URL }}/${{ env.IMAGE_NAME }}:latest \
+            --region ${{ env.REGION }} \
+            --platform managed \
+            --allow-unauthenticated
