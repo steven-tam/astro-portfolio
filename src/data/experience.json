@@ -5,23 +5,23 @@
             "role": "Software Engineer",
             "start": "October 2023",
             "end": "Present",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "description": "Developed and deployed a mobile app on the App Store and Google Play using React Native, Expo, and TypeScript to help people learn freestyle. Integrated in-app purchases with Revenuecat. Utilized Figma to design captivating screenshots for store-listing and web. Created a Bun and Hono server that handles base64 audio data for AI transcriptions and scoring. Used Zustand to efficiently manage and persist multiple states, enabling a lightweight and performant way to share data across components.",
             "imageUrl": "/img/placeholder.png"
         },
         {
-            "organization": "YapRap LLC",
-            "role": "Software Engineer",
+            "organization": "Gopher Major Planner",
+            "role": "Team Lead/Fullstack Developer",
             "start": "October 2023",
             "end": "Present",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "description": "Led a team of 8 to design and build a full-stack web app for helping UMN students find compatible majors and minors based on courses taken. Outlined key features and managed the project using Agile Scrum methodology. Provided coaching to teammates with no prior experience in React and TypeScript. Pre-processed data of all programs and courses offered at UMN using Python to enhance performance, readability, and development speed. Programmed a Node and Express server to deliver program data stored as jsonb in PostgreSQL to the client. Utilized Chart.js for data analysis to create a compatibility bar chart for majors.",
             "imageUrl": "/img/placeholder.png"
         },
         {
-            "organization": "YapRap LLC",
-            "role": "Software Engineer",
+            "organization": "Hyland Hill Ski Area",
+            "role": "Maintenance Aide",
             "start": "October 2023",
             "end": "Present",
-            "description": "Lorem ",
+            "description": "Collaborated effectively with a diverse team to address and resolve issues and complaints across multiple park regions. Engaged with park visitors, providing prompt and helpful responses to questions and concerns",
             "imageUrl": "/img/placeholder.png"
         }
     ],
@@ -31,15 +31,15 @@
             "role": "IT Support",
             "start": "October 2023",
             "end": "Present",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "description": "Coached library patrons in critical areas such as job search strategies, crafting effective job applications, building impactful. resumes, and navigating Microsoft Excel Spreadsheets. Diagnosed and resolved technical challenges with computers, scanners, printers, and tablets, enhancing patrons' experience.",
             "imageUrl": "/img/placeholder.png"
         },
         {
-            "organization": "YapRap LLC",
+            "organization": "Our Savior's Community Services",
             "role": "English Instructor",
             "start": "October 2023",
             "end": "Present",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "description": "Developed and delivered engaging online English lessons for a group of over 10 immigrant adults. Worked closely with a supervisor to create and implement more than 15 tailored lesson plans.",
             "imageUrl": "/img/placeholder.png"
         }
     ],
@@ -57,7 +57,7 @@
             "name": "YapRap - Android/IOS",
             "start": "Feb 2023",
             "end": "Sep 2024",
-            "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
+            "technology": "React Native, Expo, Typescript, RevenueCat, SQLite, NodeJS, ",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
             "imageUrl": "/img/yaprap-home.svg",
             "sourceUrl": "https://yaprap.net"
