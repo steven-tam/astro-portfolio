@@ -48,8 +48,8 @@
             "name": "Gopher Major Planner",
             "start": "Feb 2023",
             "end": "Sep 2024",
-            "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
-            "description": "This project was created in the Social Coding Club and provides UMN students with a dynamic compatibility bar chart of majors based on courses taken, helping those who want to add another major or minor. I led a team of eight and introduced React to members with no prior experience. On the client side, I designed and developed the navbar, footer, bar chart, and checklist. On the backend, I worked with Node.js, Express, and PostgreSQL. Our project was the only completed project in the club that semester.",
+            "technology": "React; Vite; Tailwind; Node; Express; Postgres; Typescript",
+            "description": "I led a team of 8 and created this project in UMN Social Coding Club as a way to help students choose their majors and minors. A core feature of this project, and one that I made, is the compatibility bar chart and checklist which shows the progress of all majors based on courses taken. On the frontend, I designed and developed the navbar, footer, bar chart, and checklist. On the backend, I used Node and Express to create endpoints for delivering data of each major stored as JSONB in Postgres. I used Python to pull and preprocess data from UMN's program API, which contains over 1000 programs, including certificates, undergraduate programs, and graduate programs across all University of Minnesota locations (Twin Cities, Duluth, Crookston, and Rochester).",
             "imageUrl": "/img/gmp-results-long.png",
             "sourceUrl": "https://github.com/steven-tam/MmOverlap"
         },
@@ -57,8 +57,8 @@
             "name": "YapRap - Android/IOS",
             "start": "Feb 2023",
             "end": "Sep 2024",
-            "technology": "React Native, Expo, Typescript, RevenueCat, SQLite, NodeJS, ",
-            "description": "I was looking for ways to practice freestyle and could not find an app with the features I wanted, so I created a startup and launched this app out of it. It",
+            "technology": "React Native; Expo; RevenueCat; SQLite; Node; Bun; Hono; Zustand; Typescript",
+            "description": "I was looking for ways to practice freestyle, so I created a startup and launched this app. Audio recordings are stored locally in the on-device filesystem. I used Zustand to manage state and persist it in SQLite, improving performance and readability while reducing the eye strain that React Context or Redux would cause. I also created a server using Bun and Hono to handle base64 audio data for AI transcriptions and scoring. The app is available on the App Store and Google Play.",
             "imageUrl": "/img/yaprap-home.svg",
             "sourceUrl": "https://yaprap.net"
         },
@@ -66,8 +66,8 @@
             "name": "YapRap - Web",
             "start": "Feb 2023",
             "end": "Sep 2024",
-            "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL; Figma",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "technology": "Next.js; Tailwind; Figma; Typescript",
+            "description": "I made this static site to direct to convert potential customers to app downloads. I used Figma to design captivating screenshots for store-listing and web. I used Next.js to create a static site that is fast and SEO-friendly. I used Tailwind to style the site.",
             "imageUrl": "/img/yaprap-web-home.png",
             "sourceUrl": "https://yaprap.net"
         },
@@ -75,9 +75,18 @@
             "name": "Interactive Prequisite Flowchart",
             "start": "Feb 2023",
             "end": "Sep 2024",
-            "technology": "ReactJS; TailwindCSS; NodeJS; PostgreSQL",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+            "technology": "React; Tailwind; Node; Postgres",
+            "description": "I joined Interactive Prequisite Flowchart, another project in UMN Social Coding Club, after I was done with Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. ",
             "imageUrl": "/img/ipf-flowchart.png",
+            "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
+        },
+        {
+            "name": "Thesis Auth",
+            "start": "Feb 2023",
+            "end": "Sep 2024",
+            "technology": "React; Vite; React-Router; Bun; Hono; JWT; SQLite; Typescript;",
+            "description": "I made this app to learn about authentication and authorization to write my thesis. It's a simple fullstack app that uses Bun and Hono to handle authentication and authorization. I securely send a httponly cookie with JWT to secure the API and SQLite to store user data. I use Argon2id for modern password hashing. The frontend is built with React and Vite, and the backend is built with Node and Express.",
+            "imageUrl": "/img/thesis-auth.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         }
     ]
