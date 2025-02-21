@@ -3,24 +3,24 @@
         {
             "organization": "YapRap LLC",
             "role": "Software Engineer",
-            "start": "October 2023",
-            "end": "Present",
+            "start": "Jun 2024",
+            "end": "Feb 2025",
             "description": "Developed and deployed a mobile app on the App Store and Google Play using React Native, Expo, and TypeScript to help people learn freestyle. Integrated in-app purchases with Revenuecat. Utilized Figma to design captivating screenshots for store-listing and web. Created a Bun and Hono server that handles base64 audio data for AI transcriptions and scoring. Used Zustand to efficiently manage and persist multiple states, enabling a lightweight and performant way to share data across components.",
             "imageUrl": "/img/placeholder.png"
         },
         {
             "organization": "Gopher Major Planner",
             "role": "Team Lead/Fullstack Developer",
-            "start": "October 2023",
-            "end": "Present",
+            "start": "Feb 2023",
+            "end": "Jun 2023",
             "description": "Led a team of 8 to design and build a full-stack web app for helping UMN students find compatible majors and minors based on courses taken. Outlined key features and managed the project using Agile Scrum methodology. Provided coaching to teammates with no prior experience in React and TypeScript. Pre-processed data of all programs and courses offered at UMN using Python to enhance performance, readability, and development speed. Programmed a Node and Express server to deliver program data stored as jsonb in PostgreSQL to the client. Utilized Chart.js for data analysis to create a compatibility bar chart for majors.",
             "imageUrl": "/img/placeholder.png"
         },
         {
             "organization": "Hyland Hill Ski Area",
             "role": "Maintenance Aide",
-            "start": "October 2023",
-            "end": "Present",
+            "start": "Oct 2023",
+            "end": "Jan 2024",
             "description": "Collaborated effectively with a diverse team to address and resolve issues and complaints across multiple park regions. Engaged with park visitors, providing prompt and helpful responses to questions and concerns",
             "imageUrl": "/img/placeholder.png"
         }
@@ -29,16 +29,16 @@
         {
             "organization": "Minneapolis Central Library",
             "role": "IT Support",
-            "start": "October 2023",
-            "end": "Present",
+            "start": "May 2024",
+            "end": "Sep 2024",
             "description": "Coached library patrons in critical areas such as job search strategies, crafting effective job applications, building impactful. resumes, and navigating Microsoft Excel Spreadsheets. Diagnosed and resolved technical challenges with computers, scanners, printers, and tablets, enhancing patrons' experience.",
             "imageUrl": "/img/placeholder.png"
         },
         {
             "organization": "Our Savior's Community Services",
             "role": "English Instructor",
-            "start": "October 2023",
-            "end": "Present",
+            "start": "May 2024",
+            "end": "Sep 2024",
             "description": "Developed and delivered engaging online English lessons for a group of over 10 immigrant adults. Worked closely with a supervisor to create and implement more than 15 tailored lesson plans.",
             "imageUrl": "/img/placeholder.png"
         }
@@ -47,45 +47,45 @@
         {
             "name": "Gopher Major Planner",
             "start": "Feb 2023",
-            "end": "Sep 2024",
+            "end": "Jun 2024",
             "technology": "React; Vite; Tailwind; Node; Express; Postgres; Typescript",
-            "description": "I led a team of 8 and created this project in UMN Social Coding Club as a way to help students choose their majors and minors. A core feature of this project, and one that I made, is the compatibility bar chart and checklist which shows the progress of all majors based on courses taken. On the frontend, I designed and developed the navbar, footer, bar chart, and checklist. On the backend, I used Node and Express to create endpoints for delivering data of each major stored as JSONB in Postgres. I used Python to pull and preprocess data from UMN's program API, which contains over 1000 programs, including certificates, undergraduate programs, and graduate programs across all University of Minnesota locations (Twin Cities, Duluth, Crookston, and Rochester).",
+            "description": "I led a team of 8 and created this project in UMN Social Coding Club as a way to help students choose their majors and minors. A core feature of this project, and one that I made, is the compatibility bar chart and checklist which shows the progress of all majors based on courses taken. On the frontend, I designed and developed the navbar, footer, bar chart, and checklist. On the backend, I used Node and Express to create endpoints for delivering data of each major stored as JSONB in Postgres. I used Python to pull and preprocess data from UMN's program API, which contains over 1000 programs, including certificates, undergraduate programs, and graduate programs across all University of Minnesota locations (Twin Cities, Duluth, Crookston, and Morris).",
             "imageUrl": "/img/gmp-results-long.png",
             "sourceUrl": "https://github.com/steven-tam/MmOverlap"
         },
         {
             "name": "YapRap - Android/IOS",
-            "start": "Feb 2023",
-            "end": "Sep 2024",
+            "start": "Jun 2024",
+            "end": "Jan 2025",
             "technology": "React Native; Expo; RevenueCat; SQLite; Node; Bun; Hono; Zustand; Typescript",
-            "description": "I was looking for ways to practice freestyle, so I created a startup and launched this app. Audio recordings are stored locally in the on-device filesystem. I used Zustand to manage state and persist it in SQLite, improving performance and readability while reducing the eye strain that React Context or Redux would cause. I also created a server using Bun and Hono to handle base64 audio data for AI transcriptions and scoring. The app is available on the App Store and Google Play.",
+            "description": "I was looking for ways to practice freestyle, so I created a startup and launched this app. Audio recordings are stored locally in the on-device filesystem. I used Zustand to manage state and persist it in SQLite, improving performance and readability while reducing the eye strain that React Context or Redux would have caused. I also created a server using Bun and Hono to transcribe and score voice recordings with AI. This app currently has 100 downloads on Android and iOS.",
             "imageUrl": "/img/yaprap-home.svg",
             "sourceUrl": "https://yaprap.net"
         },
         {
             "name": "YapRap - Web",
-            "start": "Feb 2023",
-            "end": "Sep 2024",
-            "technology": "Next.js; Tailwind; Figma; Typescript",
-            "description": "I made this static site to direct to convert potential customers to app downloads. I used Figma to design captivating screenshots for store-listing and web. I used Next.js to create a static site that is fast and SEO-friendly. I used Tailwind to style the site.",
+            "start": "Jun 2024",
+            "end": "Jan 2025",
+            "technology": "Next.js; Tailwind; Framer Motion; Figma; Typescript",
+            "description": "I made this static site with Next.js to direct direct web traffic to my mobile app, following best practices for SEO. This website is often the first thing new users will see, so I designed it with the following attributes in mind: simple, playful, and approachable. I used Figma to design the screenshots and gif, showcasing key features in my app. I used tailwind for styles and Framer Motion for animation to bring the components to life. Similar to all of my other web apps, it follows mobile first design principle.",
             "imageUrl": "/img/yaprap-web-home.png",
             "sourceUrl": "https://yaprap.net"
         },
         {
-            "name": "Interactive Prequisite Flowchart",
+            "name": "Gopher Course Flowchart",
             "start": "Feb 2023",
-            "end": "Sep 2024",
-            "technology": "React; Tailwind; Node; Postgres",
-            "description": "I joined Interactive Prequisite Flowchart, another project in UMN Social Coding Club, after I was done with Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. ",
+            "end": "Feb 2025",
+            "technology": "Next.js; Tailwind; Typescript",
+            "description": "I joined the Gopher Course Flowchart, another project in UMN Social Coding Club, team after Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. This project provides UMN students a flowchart of courses, helping them make informed decision for their schedule. I helped convert their CSS to Tailwind and worked on their Dark Mode feature. I helped integrate the compatibility bar chart and checklist from Gopher Major Planner. This project is still a work in progress.",
             "imageUrl": "/img/ipf-flowchart.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         },
         {
             "name": "Thesis Auth",
-            "start": "Feb 2023",
-            "end": "Sep 2024",
+            "start": "Jan 2025",
+            "end": "Feb 2025",
             "technology": "React; Vite; React-Router; Bun; Hono; JWT; SQLite; Typescript;",
-            "description": "I made this app to learn about authentication and authorization to write my thesis. It's a simple fullstack app that uses Bun and Hono to handle authentication and authorization. I securely send a httponly cookie with JWT to secure the API and SQLite to store user data. I use Argon2id for modern password hashing. The frontend is built with React and Vite, and the backend is built with Node and Express.",
+            "description": "I made this app to learn about authentication and authorization to write my thesis. I believe building your own authentication system is not only great for learning server side development but also a viable option for most applications, offering high-level security and scalability while having better performance, flexibility, and affordablity. This is a simple full-stack web app that showcases an authentication system built from scratch, featuring only three screens: login, signup, and logged-in. I follow modern security practices, using modern cryptographic functions like Argon2, cookies, and JWT. On sign-up, the user's email and password are sent to the server, where the password is encrypted using Argon2id before the email and hashed password are stored in a SQLite database in WAL mode. When the user logs in, the server securely sends a signed, HttpOnly cookie containing a short-lived JWT token.",
             "imageUrl": "/img/thesis-auth.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         }
