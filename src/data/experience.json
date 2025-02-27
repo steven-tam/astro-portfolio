@@ -58,7 +58,7 @@
             "start": "Jun 2024",
             "end": "Jan 2025",
             "technology": "React Native; Expo; RevenueCat; SQLite; Node; Bun; Hono; Zustand; Typescript",
-            "description": "I was looking for ways to practice freestyle, so I created a startup and launched this app. Audio recordings are stored locally in the on-device filesystem. I used Zustand to manage state and persist it in SQLite, improving performance and readability while reducing the eye strain that React Context or Redux would have caused. I also created a server using Bun and Hono to transcribe and score voice recordings with AI. This app currently has 100 downloads on Android and iOS.",
+            "description": "I was looking for ways to practice freestyle, so I created a startup and launched this app. Audio recordings are stored locally in the on-device filesystem. I used Zustand to manage state and persist it in SQLite, improving performance and readability while reducing the eye strain that React Context or Redux would have caused. I also created a server using Bun and Hono to transcribe and score voice recordings with AI. This app currently has 200 downloads on Android and iOS.",
             "imageUrl": "/img/yaprap-home.svg",
             "sourceUrl": "https://yaprap.net"
         },
@@ -76,7 +76,7 @@
             "start": "Feb 2023",
             "end": "Feb 2025",
             "technology": "Next.js; Tailwind; Typescript",
-            "description": "I joined the Gopher Course Flowchart, another project in UMN Social Coding Club, team after Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. This project provides UMN students a flowchart of courses, helping them make informed decision for their schedule. I helped convert their CSS to Tailwind and worked on their Dark Mode feature. I helped integrate the compatibility bar chart and checklist from Gopher Major Planner. This project is still a work in progress.",
+            "description": "I joined the Gopher Course Flowchart, another project in UMN Social Coding Club, team after Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. This project provides UMN students a flowchart of courses, helping them make informed decision for their schedule. I helped convert their CSS to Tailwind and worked on their Dark Mode feature. I helped integrate the compatibility bar chart and checklist from Gopher Major Planner. This project is a work in progress.",
             "imageUrl": "/img/ipf-flowchart.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         },
@@ -87,7 +87,7 @@
             "technology": "React; Vite; React-Router; Bun; Hono; JWT; SQLite; Typescript;",
             "description": "I made this app to learn about authentication and authorization to write my thesis. I believe building your own authentication system is not only great for learning server side development but also a viable option for most applications, offering high-level security and scalability while having better performance, flexibility, and affordablity. This is a simple full-stack web app that showcases an authentication system built from scratch, featuring only three screens: login, signup, and logged-in. I follow modern security practices, using modern cryptographic functions like Argon2, cookies, and JWT. On sign-up, the user's email and password are sent to the server, where the password is encrypted using Argon2id before the email and hashed password are stored in a SQLite database in WAL mode. When the user logs in, the server securely sends a signed, HttpOnly cookie containing a short-lived JWT token.",
             "imageUrl": "/img/thesis-auth.png",
-            "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
+            "sourceUrl": "https://github.com/steven-tam/thesis-auth"
         }
     ]
 }
