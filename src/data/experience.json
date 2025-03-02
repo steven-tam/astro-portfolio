@@ -6,7 +6,7 @@
             "start": "Jun 2024",
             "end": "Feb 2025",
             "description": "Developed and deployed a mobile app on the App Store and Google Play using React Native, Expo, and TypeScript to help people learn freestyle. Integrated in-app purchases with Revenuecat. Utilized Figma to design captivating screenshots for store-listing and web. Created a Bun and Hono server that handles base64 audio data for AI transcriptions and scoring. Used Zustand to efficiently manage and persist multiple states, enabling a lightweight and performant way to share data across components.",
-            "imageUrl": "/img/placeholder.png"
+            "imageUrl": "/img/yaprap-peach-icon.png"
         },
         {
             "organization": "Gopher Major Planner",
@@ -14,7 +14,7 @@
             "start": "Feb 2023",
             "end": "Jun 2023",
             "description": "Led a team of 8 to design and build a full-stack web app for helping UMN students find compatible majors and minors based on courses taken. Outlined key features and managed the project using Agile Scrum methodology. Provided coaching to teammates with no prior experience in React and TypeScript. Pre-processed data of all programs and courses offered at UMN using Python to enhance performance, readability, and development speed. Programmed a Node and Express server to deliver program data stored as jsonb in PostgreSQL to the client. Utilized Chart.js for data analysis to create a compatibility bar chart for majors.",
-            "imageUrl": "/img/placeholder.png"
+            "imageUrl": "/img/big_goldy_face.png"
         },
         {
             "organization": "Hyland Hill Ski Area",
