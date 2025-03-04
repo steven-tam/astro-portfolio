@@ -76,7 +76,7 @@
             "start": "Feb 2023",
             "end": "Feb 2025",
             "technology": "Next.js; Tailwind; Typescript",
-            "description": "I joined the Gopher Course Flowchart, another project in UMN Social Coding Club, team after Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. This project provides UMN students a flowchart of courses, helping them make informed decision for their schedule. I helped convert their CSS to Tailwind and worked on their Dark Mode feature. I helped integrate the compatibility bar chart and checklist from Gopher Major Planner. This project is a work in progress.",
+            "description": "I joined the Gopher Course Flowchart, another project in UMN Social Coding Club, team after Gopher Major Planner. Unlike Gopher Major Planner which uses UMN's program API, Interactive Preqrequisite Flowchart uses UMN's course API. This project provides UMN students a flowchart of courses, helping them make informed decision for their schedule. I helped convert their CSS to Tailwind, improved their layout to follow the box model, and worked on their Dark Mode feature. I helped integrate the compatibility bar chart and checklist from Gopher Major Planner. This project is a work in progress.",
             "imageUrl": "/img/ipf-flowchart.png",
             "sourceUrl": "https://github.com/chaunmt/Interactive-Prerequisite-Flowchart"
         },
