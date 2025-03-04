@@ -67,7 +67,7 @@
             "start": "Jun 2024",
             "end": "Jan 2025",
             "technology": "Next.js; Tailwind; Framer Motion; Figma; Typescript",
-            "description": "I made this static site with Next.js to direct direct web traffic to my mobile app, following best practices for SEO. This website is often the first thing new users will see, so I designed it with the following attributes in mind: simple, playful, and approachable. I used Figma to design the screenshots and gif, showcasing key features in my app. I used tailwind for styles and Framer Motion for animation to bring the components to life. Similar to all of my other web apps, it follows mobile first design principle.",
+            "description": "I made this static site with Next.js to direct web traffic to my mobile app, following best practices for SEO. This website is often the first thing new users will see, so I designed it with the following attributes in mind: simple, playful, and approachable. I used Figma to design the screenshots and gif, showcasing key features in my app. I used tailwind for styles and Framer Motion for animation to bring the components to life. Similar to all of my other web apps, it follows mobile first design principle.",
             "imageUrl": "/img/yaprap-web-home.png",
             "sourceUrl": "https://yaprap.net"
         },
